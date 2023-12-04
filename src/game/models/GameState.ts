@@ -83,7 +83,7 @@ export default class GameState {
     // Reset the current run
     public reset() {
         this.moving = false;
-        this.movingSpeed = -0.5;
+        this.movingSpeed = 5;
         this.distanceTravelled = 0;
         this.started = false;
         this.halted = false;
@@ -147,7 +147,7 @@ export default class GameState {
         this.distanceTravelled += this.movingSpeed * delta;
         this.score += this.movingSpeed * delta;
         if(this.movingSpeed < this.maxMovingSpeed && this.moving) {
-            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 0.05), this.maxMovingSpeed);
+            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 0.5), this.maxMovingSpeed);
         }
     }
 
