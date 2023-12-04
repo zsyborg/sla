@@ -1,6 +1,6 @@
 import { Settings } from "./game/models/Settings";
 
-const AWS_URL = "https://ivj6suabnxk5izibdy4uyp5pni0mraue.lambda-url.eu-central-1.on.aws/";
+const AWS_URL = "";
 
 export async function fetchLeaderBoard() {
     if(import.meta.env.DEV) return [{ username: "placeholder", score: 1000 }];

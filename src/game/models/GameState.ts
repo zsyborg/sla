@@ -88,7 +88,7 @@ export default class GameState {
         this.started = false;
         this.halted = false;
         this.mouse.set(-1, -1);
-        this.lifes = 3333;
+        this.lifes = 3;
         this.score = 0;
         ObstacleManager.getInstance().reset();
         EnvironmentManager.getInstance().reset();
