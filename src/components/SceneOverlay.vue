@@ -17,15 +17,15 @@
     <div class="overlay-container" :class="{fade: overlayState === 1, hide: overlayState === 2}">
         <v-toolbar class="navbar" height="72">
             <div class="nav-brand">
-                <button class="btn-logo" @click="$emit('switch')">
-                    <!-- <img src="/logo_white.svg" alt="Slash Saber logo" class="logo"> -->
-                </button>
-                <!-- <v-tooltip text="Slash Saber is open-source!" location="top"> -->
-                    <!-- <template v-slot:activator="{ props }">
+                <!-- <button class="btn-logo" @click="$emit('switch')">
+                    <img src="/logo_white.svg" alt="Slash Saber logo" class="logo">
+                </button> -->
+                <!-- <v-tooltip text="Slash Saber is open-source!" location="top">
+                    <template v-slot:activator="{ props }">
                         <v-btn href="https://github.com/honzaap/SlashSaber" target="_blank" @click="$emit('toggleCursor')" v-bind="props" density="compact" 
                         icon="mdi-github" />
-                    </template> -->
-                </v-tooltip>
+                    </template>
+                </v-tooltip> -->
             </div>
             <div class="score">
                 <p>Your highest score: <span class="highlight">{{ prettifyScore(highestScore) }} pts</span></p>
