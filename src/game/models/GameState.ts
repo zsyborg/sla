@@ -83,7 +83,7 @@ export default class GameState {
     // Reset the current run
     public reset() {
         this.moving = false;
-        this.movingSpeed = 0;
+        this.movingSpeed = -0.5;
         this.distanceTravelled = 0;
         this.started = false;
         this.halted = false;
