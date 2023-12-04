@@ -18,9 +18,9 @@
         <v-toolbar class="navbar" height="72">
             <div class="nav-brand">
                 <button class="btn-logo" @click="$emit('switch')">
-                    <img src="/logo_white.svg" alt="Slash Saber logo" class="logo">
+                    <!-- <img src="/logo_white.svg" alt="Slash Saber logo" class="logo"> -->
                 </button>
-                <v-tooltip text="Slash Saber is open-source!" location="top">
+                <!-- <v-tooltip text="Slash Saber is open-source!" location="top"> -->
                     <!-- <template v-slot:activator="{ props }">
                         <v-btn href="https://github.com/honzaap/SlashSaber" target="_blank" @click="$emit('toggleCursor')" v-bind="props" density="compact" 
                         icon="mdi-github" />
