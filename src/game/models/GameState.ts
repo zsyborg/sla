@@ -29,7 +29,7 @@ export default class GameState {
     private clock = new THREE.Clock();
 
     private readonly fixedTimeStep = 1.0 / 60.0; 
-    private readonly maxMovingSpeed = 5.35;
+    private readonly maxMovingSpeed = 2.35;
 
     private moving = false;
 
@@ -88,7 +88,7 @@ export default class GameState {
         this.started = false;
         this.halted = false;
         this.mouse.set(-1, -1);
-        this.lifes = 3;
+        this.lifes = 3333;
         this.score = 0;
         ObstacleManager.getInstance().reset();
         EnvironmentManager.getInstance().reset();
@@ -147,7 +147,7 @@ export default class GameState {
         this.distanceTravelled += this.movingSpeed * delta;
         this.score += this.movingSpeed * delta;
         if(this.movingSpeed < this.maxMovingSpeed && this.moving) {
-            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 1), this.maxMovingSpeed);
+            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 0.2), this.maxMovingSpeed);
         }
     }
 
