@@ -1,5 +1,5 @@
 <template>
-    <h2 :class="{compact: props.compact}">Top slashers</h2>
+    <h2 :class="{compact: props.compact}">Top Blitzers</h2>
     <span v-if="loading" class="loader"></span>
     <div class="leaderboard" :class="{compact: props.compact}">
         <div v-for="(item, i) in items" class="leaderboard-item"
