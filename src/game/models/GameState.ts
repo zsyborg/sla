@@ -139,7 +139,7 @@ export default class GameState {
 
     public update() {
         const delta = this.clock.getDelta();
-        this.world.step(this.fixedTimeStep, delta, 3);
+        this.world.step(this.fixedTimeStep, delta, 2);
         for(const handler of this.logicHandlers) {
             handler(delta);
         }
@@ -147,7 +147,7 @@ export default class GameState {
         this.distanceTravelled += this.movingSpeed * delta;
         this.score += this.movingSpeed * delta;
         if(this.movingSpeed < this.maxMovingSpeed && this.moving) {
-            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 0.2), this.maxMovingSpeed);
+            this.movingSpeed = Math.min(this.movingSpeed + delta * (this.maxMovingSpeed - this.movingSpeed + 0.05), this.maxMovingSpeed);
         }
     }
 
